@@ -20,8 +20,8 @@
     <input type="submit" value="Pay">
   </form>
   <!-- includes the Braintree JS client SDK -->
-  <script src="https://js.braintreegateway.com/web/3.46.0/js/client.min.js"></script>
-  <script src="https://js.braintreegateway.com/web/3.46.0/js/hosted-fields.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.59.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.59.0/js/hosted-fields.min.js"></script>
   <script>
     var form = document.querySelector('#payment');
     var submit = document.querySelector('input[type="submit"]');
@@ -57,7 +57,7 @@
         form.addEventListener('submit', function (event) {
           event.preventDefault();
 
-          hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+          hostedFieldInstance.tokenize(function (tokenizeErr, payload) {
             if (tokenizeErr) {
               console.error(tokenizeErr);
               return;
@@ -65,7 +65,7 @@
             // set nonve to send to the server
             document.getElementById('nonce').value = payload.nonce;
             // submit form
-            document.getelementbyId('payment').submit();
+            document.getElementById('payment').submit();
           });
         }, false);
       });
