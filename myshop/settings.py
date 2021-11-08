@@ -58,7 +58,7 @@ ROOT_URLCONF = 'myshop.urls'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -112,6 +112,11 @@ AUTH_PASSWORD_VALIDATORS = [
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'pachom@gmail.com'
+# EMAIL_HOST_PASSWORD = 'juanjo01'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
 # Braintree settings
 BRAINTREE_MERCHANT_ID = 'k5qtcm5gdwprg7nz'  # Merchant ID
