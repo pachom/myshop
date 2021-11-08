@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
+    'coupons.apps.CouponsConfig',
 ]
 
 MIDDLEWARE = [
@@ -112,11 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'pachom@gmail.com'
-# EMAIL_HOST_PASSWORD = 'juanjo01'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
 
 # Braintree settings
 BRAINTREE_MERCHANT_ID = 'k5qtcm5gdwprg7nz'  # Merchant ID
